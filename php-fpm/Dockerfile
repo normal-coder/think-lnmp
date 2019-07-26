@@ -23,5 +23,5 @@ RUN apt-get update \
 # 安装composer
 RUN curl --silent https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
-    && composer config -g repo.packagist composer https://packagist.laravel-china.org \
+    && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/ \
     && composer global require hirak/prestissimo
