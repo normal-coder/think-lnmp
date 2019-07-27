@@ -1,4 +1,4 @@
-FROM php:7.1-fpm
+FROM php:7.2-fpm
 
 WORKDIR "/app"
 
@@ -24,4 +24,4 @@ RUN apt-get update \
 RUN curl --silent https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/ \
-    && composer global require hirak/prestissimo
+    && composer global require hirak/prestissimo \
