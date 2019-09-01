@@ -21,8 +21,8 @@ RUN apt-get update \
     && echo -e "\n" | pecl install imagick \
     && pecl install memcached \
     && pecl clear-cache \
-    && docker-php-ext-enable swoole memcached imagick redis \
-    # && docker-php-ext-enable redis \
+    && docker-php-ext-install mysqli \
+    && docker-php-ext-enable swoole memcached imagick redis mysqli \
     && apt-get clean && apt-get autoclean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
